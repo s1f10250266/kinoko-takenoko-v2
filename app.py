@@ -12,6 +12,10 @@ def top():
 
 @app.route('/api/v1/votes')
 def vote_api():
+    return jsonify({'kinoko':kinoko_count, 'takenoko':takenoko_count})
+
+@app.route('/api/v1/votes')
+def vote_api():
     return jsonify({'kinoko': kinoko_count, 'takenoko': takenoko_count})
 
 @app.route('/vote', methods=['POST'])
